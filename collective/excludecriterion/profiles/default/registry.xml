@@ -1,0 +1,18 @@
+<!-- Operation Definitions -->
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="plone">
+
+    <records interface="plone.app.querystring.interfaces.IQueryOperation"
+             prefix="plone.app.querystring.operation.selection.isnot">
+        <value key="title" i18n:translate="">Is not</value>
+        <value key="description" i18n:translate="">Tip: you can use * to autocomplete.</value>
+        <value key="operation">cciaa.topic_view.queryparser._notequal</value>
+        <value key="widget">MultipleSelectionWidget</value>
+    </records>
+    <records interface="plone.app.querystring.interfaces.IQueryField"
+             prefix="plone.app.querystring.field.Subject" purge="False">
+        <value key="operations" purge="False">
+            <element>plone.app.querystring.operation.selection.isnot</element>
+        </value>
+    </records>
+</registry>
